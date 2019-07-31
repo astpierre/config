@@ -1,2 +1,3 @@
-# config
-MacOS configurations
+## macos.sh  
+> Applies changes to many MacOS settings when run.
+
