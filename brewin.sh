@@ -28,6 +28,7 @@ brew install jo
 brew install blueutil
 brew install go
 brew install hub
+brew install terraform
 
 # Remove outdated versions from the cellar.
 brew cleanup
