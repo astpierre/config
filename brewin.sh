@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-# Install command-line tools using Homebrew.
-
-# Ask for the administrator password upfront.
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
@@ -15,8 +7,11 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Update homebrew recipes
+echo "Updating homebrew..."
 brew update
 brew upgrade --all
+
 brew install coreutils
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 brew install moreutils
@@ -33,6 +28,19 @@ brew install vim --override-system-vi
 brew install git
 brew install tree
 brew install docker
+brew install bash-completion
+brew install zsh-completion
+brew install libyubikey
+brew install zsh-syntax-highlighting
+brew install jq
+brew install jo
+brew install blueutil
+brew install go
+brew install hub
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+echo "Git config"
+git config --global user.name "Andrew St Pierre"
+git config --global user.email andrew.stpierre@gmail.com
