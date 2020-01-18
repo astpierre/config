@@ -1,10 +1,6 @@
 > __work in progress__
 # Contents  
 
-### bootstrap.sh
-> Installs Xcode command line tools and updates OS.  
-__Usage:__ `./bootstrap.sh` 
-
 ### macos.sh  
 > Applies changes to many MacOS settings when run.
 __Usage:__ `./macos.sh` 
